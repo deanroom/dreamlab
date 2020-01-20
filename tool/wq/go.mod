@@ -1,4 +1,4 @@
-module github.com/deanroom/wq
+module github.com/deanroom/dreamtool/tool/wq
 
 go 1.13
 
