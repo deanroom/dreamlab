@@ -1,4 +1,4 @@
-module github.com/dreamtool/tool/wd
+module github.com/deanroom/tool/wd
 
 go 1.13
 
