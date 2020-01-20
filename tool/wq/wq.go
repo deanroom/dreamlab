@@ -93,7 +93,7 @@ func QueryAndPlay(keyWord string) error {
 	if err != nil {
 		return err
 	}
-	DownloadFile(fmt.Sprintf("https://dict.youdao.com/dictvoice?audio=%s&type=2", keyWord), fmt.Sprintf("%s/wordic/download.mp3", home))
+	DownloadFile(fmt.Sprintf("https://dict.youdao.com/dictvoice?audio=%s&type=2", keyWord), fmt.Sprintf("%s/wordquery/download.mp3", home))
 	play()
 	return nil
 }
