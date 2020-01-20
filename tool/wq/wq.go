@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"github.com/urfave/cli/v2"
 	"io"
 	"io/ioutil"
 	"log"
@@ -13,6 +12,7 @@ import (
 	"github.com/PuerkitoBio/goquery"
 	"github.com/hajimehoshi/oto"
 	"github.com/tosone/minimp3"
+	"github.com/urfave/cli"
 )
 
 func QueryWords(keyword string) {
@@ -75,13 +75,25 @@ func DownloadFile(url string, filepath string) error {
 
 	return nil
 }
-
-func play() {
-	var file, _ = ioutil.ReadFile("/users/jerry/wordic/download.mp3")
+func getFilePath() (string,error) {
+	home, err := os.UserHomeDir()
+	if err != nil {
+		return "",err
+	}
+	filepath := fmt.Sprintf("%s/wordquery/download.mp3", home)
+	return filepath,nil
+}
+func play() error {
+	home, err := getFilePath()
+	if err != nil {
+		return err
+	}
+	var file, _ = ioutil.ReadFile(home)
 	dec, data, _ := minimp3.DecodeFull(file)
 
 	player, _ := oto.NewPlayer(dec.SampleRate, dec.Channels, 2, 1024)
 	player.Write(data)
+	return nil
 }
 
 func QueryAndPlay(keyWord string) error {
@@ -89,11 +101,11 @@ func QueryAndPlay(keyWord string) error {
 	if len(keyWord) == 0 {
 		keyWord = "example"
 	}
-	home, err := os.UserHomeDir()
+	file, err := getFilePath()
 	if err != nil {
 		return err
 	}
-	DownloadFile(fmt.Sprintf("https://dict.youdao.com/dictvoice?audio=%s&type=2", keyWord), fmt.Sprintf("%s/wordquery/download.mp3", home))
+	DownloadFile(fmt.Sprintf("https://dict.youdao.com/dictvoice?audio=%s&type=2", keyWord), file)
 	play()
 	return nil
 }
@@ -110,5 +122,4 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-
 }
