@@ -1,4 +1,4 @@
-module github.com/deanroom/dreamtool/tool/dic
+module github.com/deanroom/dreamtool/tool/dict
 
 go 1.13
 
