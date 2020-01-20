@@ -106,7 +106,9 @@ func QueryAndPlay(keyWord string) error {
 		return err
 	}
 	DownloadFile(fmt.Sprintf("https://dict.youdao.com/dictvoice?audio=%s&type=2", keyWord), file)
+
 	play()
+
 	return nil
 }
 
