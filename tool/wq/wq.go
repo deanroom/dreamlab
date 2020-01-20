@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/deanroom/dreamtool/tool/dict"
+	"github.com/deanroom/dict"
 )
 
 func main() {
