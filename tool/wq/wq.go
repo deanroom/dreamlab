@@ -2,15 +2,17 @@ package main
 
 import (
 	"fmt"
-	"github.com/PuerkitoBio/goquery"
-	"github.com/hajimehoshi/oto"
-	"github.com/tosone/minimp3"
+	"github.com/urfave/cli/v2"
 	"io"
 	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
 	"strings"
+
+	"github.com/PuerkitoBio/goquery"
+	"github.com/hajimehoshi/oto"
+	"github.com/tosone/minimp3"
 )
 
 func QueryWords(keyword string) {
@@ -40,7 +42,6 @@ func QueryWords(keyword string) {
 		pronounce = strings.ReplaceAll(pronounce, "\n\n", "    ")
 		pronounce = strings.ReplaceAll(pronounce, "\n", "")
 		fmt.Printf("\n发音:%s", pronounce)
-
 
 		trans := s.Find(".trans-container").Text()
 		trans = strings.ReplaceAll(trans, " ", "")
@@ -82,14 +83,21 @@ func play() {
 	player, _ := oto.NewPlayer(dec.SampleRate, dec.Channels, 2, 1024)
 	player.Write(data)
 }
+
 func QueryAndPlay(keyWord string) error {
 	QueryWords(keyWord)
-	if len(keyWord) > 0 {
-		DownloadFile(fmt.Sprintf( "https://dict.youdao.com/dictvoice?audio=%s&type=2",keyWord),"/users/jerry/wordic/download.mp3")
+	if len(keyWord) == 0 {
+		keyWord = "example"
 	}
+	home, err := os.UserHomeDir()
+	if err != nil {
+		return err
+	}
+	DownloadFile(fmt.Sprintf("https://dict.youdao.com/dictvoice?audio=%s&type=2", keyWord), fmt.Sprintf("%s/wordic/download.mp3", home))
 	play()
 	return nil
 }
+
 func main() {
 	app := &cli.App{
 		Action: func(c *cli.Context) error {
