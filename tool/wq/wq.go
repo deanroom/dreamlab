@@ -1,11 +1,9 @@
 package main
 
 import (
-	"fmt"
-	
 	"github.com/deanroom/dreamtool/tool/dict"
-	"github.com/urfave/cli/v2"
 )
+
 func main() {
 	// app := &cli.App{
 	// 	Action: func(c *cli.Context) error {

@@ -85,7 +85,6 @@ func play() {
 	player.Write(data)
 }
 func QueryAndPlay(keyWord string) error {
-	keyWord = "class"
 	QueryWords(keyWord)
 	if len(keyWord) > 0 {
 		DownloadFile(fmt.Sprintf( "https://dict.youdao.com/dictvoice?audio=%s&type=2",keyWord),"/users/jerry/wordic/download.mp3")
