@@ -16,7 +16,7 @@ import (
 	"github.com/tosone/minimp3"
 )
 
-//QueryAndPlay query words and play the prounce
+//QueryAndPlay query words and play the pronounce
 func QueryAndPlay(keyWord string) error {
 	queryWords(keyWord)
 	if len(keyWord) == 0 {
@@ -113,11 +113,11 @@ func getFilePath() (string, error) {
 	}
 	filepath := path.Join(home, "wordquery")
 	filename := "download.mp3"
-	err = os.MkdirAll(filepath,0700)
+	err = os.MkdirAll(filepath, 0700)
 
 	fullFileName := path.Join(filepath, filename)
-	if err != nil{
-		return fullFileName,err
+	if err != nil {
+		return fullFileName, err
 	}
 	return fullFileName, nil
 }
