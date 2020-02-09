@@ -8,7 +8,9 @@ import (
 	"net/http"
 	"os"
 	"path"
+
 	//"path/filepath"
+	"runtime"
 	"strings"
 
 	"github.com/PuerkitoBio/goquery"
@@ -27,8 +29,9 @@ func QueryAndPlay(keyWord string) error {
 		return err
 	}
 	downloadFile(fmt.Sprintf("https://dict.youdao.com/dictvoice?audio=%s&type=2", keyWord), file)
-
-	play()
+	if runtime.GOOS != "windows" {
+		play()
+	}
 
 	return nil
 }

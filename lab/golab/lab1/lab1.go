@@ -1,62 +1,31 @@
 package main
 
-import "fmt"
-
-// notifier is an interface that defines notification type behavior.
-type notifier interface {
-	notify()
-}
-
-// printer displays information.
-type printer interface {
-	print()
-}
-
-type jerry int
-
-func (j jerry) notify() {
-	fmtp.Println(j)
-}
-
-// user defines a user in the program.
-type user struct {
-	name  string
-	email string
-}
-
-func (u user) print() {
-	fmt.Printf("My name is %s and my email is %s\n", u.name, u.email)
-}
-
-func (u *user) notify() {
-	fmt.Printf("Sending User Email To %s<%s>\n", u.name, u.email)
-}
-
-func (u *user) String() string {
-	return fmt.Sprintf("My name is %q and my email is %q", u.name, u.email)
-}
+import (
+	"fmt"
+	"net"
+	"strconv"
+	"time"
+)
 
 func main() {
-	u := user{"Hoanh", "hoanhan@email.com"}
-
-	sendNotification(u)
-
-	fmt.Println(u)
-	fmt.Println(&u)
-
-	entities := []printer{
-		u,
-		&u,
+	var portsRange [256]string
+	for i := 1; i < 255; i++ {
+		portsRange[i] = strconv.Itoa(i)
 	}
-
-	u.name = "Hoanh An"
-	u.email = "hoanhan@bennington.edu"
-
-	for _, e := range entities {
-		e.print()
-	}
+	var ports []string = portsRange[:]
+	raw_connect("192.168.1.1", ports)
 }
 
-func sendNotification(n notifier) {
-	n.notify()
+func raw_connect(host string, ports []string) {
+	for _, port := range ports {
+		timeout := time.Second
+		conn, err := net.DialTimeout("tcp", net.JoinHostPort(host, port), timeout)
+		if err != nil {
+			fmt.Println("Connecting error:", err)
+		}
+		if conn != nil {
+			defer conn.Close()
+			fmt.Println("Opened", net.JoinHostPort(host, port))
+		}
+	}
 }
