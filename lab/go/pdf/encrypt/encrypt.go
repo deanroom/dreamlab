@@ -6,8 +6,8 @@ import (
 )
 
 func main() {
-	inFile := "in.pdf"
-	outFire := "out.pdf"
+	inFile := "in2.pdf"
+	outFire := "compressed.tracemonkey-pldi-09.pdf"
 	conf := pdfcpu.NewAESConfiguration("upw", "opw", 256)
 	api.EncryptFile(inFile, outFire, conf)
 }
