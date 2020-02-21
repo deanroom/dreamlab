@@ -1,0 +1,74 @@
+openapi: 3.0.0
+info:
+  title: Sample API
+  description: Optional multiline or single-line description in [CommonMark](http://commonmark.org/help/) or HTML.
+  version: 1.0.0
+servers:
+  - url: http://dev.rbcriyu.com/v1
+    description: Development Server
+  - url: http://staging.rbcriyu.com/v1
+    description: Test Server
+paths:
+  /users:
+    get:
+      summary: Returns a list of users.
+      description: Optional extended description in CommonMark or HTML.
+      responses:
+        '200':    # status code
+          description: A JSON array of user names
+          content:
+            application/json:
+              schema: 
+                type: array
+                items: 
+                  type: string
+  /users/{userId}:
+    get:
+      summary: Get a user by ID
+      parameters:
+        - in: path
+          name: userId
+          schema:
+            type: integer
+          required: true
+          description: Numeric ID of the user to get   
+    content:
+      application/json:  # <---- media type indicates how to serialize / deserialize the parameter content
+        schema:
+          type: object
+          properties:
+            type:
+              type: string
+            color:
+              type: string          
+  /ping:
+    get:
+      summary: Checks if the server is alive
+      parameters:
+        - in: header
+          name: X-Request-ID
+          schema:
+            type: string
+            format: uuid
+          required: true                 
+  /employees:
+      get:
+        summary: Returns a list of employees.
+        responses:
+          '200':      # Response
+            description: OK
+            content:  # Response body
+              application/json:  # Media type
+                schema:          # Must-have
+                  type: object   # Data type
+                  properties: 
+                    id:
+                      type: integer
+                    name:
+                      type: string
+                    fullTime: 
+                      type: boolean
+                  example:       # Sample data
+                      id: 1
+                      name: Jessica Right
+                      fullTime: true                  
