@@ -4,13 +4,14 @@ import (
 	"log"
 	"os"
 
+	"github.com/deanroom/dreamtool/tool/wq/dict"
 	"github.com/urfave/cli"
 )
 
 func main() {
 	app := &cli.App{
 		Action: func(c *cli.Context) error {
-			QueryAndPlay(c.Args().Get(0))
+			dict.QueryAndPlay(c.Args().Get(0))
 			return nil
 		},
 	}
