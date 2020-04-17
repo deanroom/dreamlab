@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	client, err := oss.New("oss-cn-hangzhou.aliyuncs.com", "LTAI4Fg1wd8x8zK5prU768cM", "Mx9dZLsl4jjfetRImQF0NZTdtSXrVB")
+	client, err := oss.New("oss-cn-hangzhou.aliyuncs.com", "", "")
 	if err != nil {
 		// HandleError(err)
 		log.Println(err)

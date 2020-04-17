@@ -1,13 +1,20 @@
 package main
 
-import "fmt"
+import (
+	"bytes"
+	"fmt"
+	"sync"
+)
+
+type SyncedBuffer struct {
+	lock   sync.Mutex
+	buffer bytes.Buffer
+}
 
 func main() {
-	fmt.Printf("Test Value : %b\n", ^uint(2))
-	fmt.Printf("Test Value : %b\n", ^uint8(2))
-	fmt.Printf("Test Value : %b\n", ^uint16(2))
-	fmt.Printf("Test Value : %b\n", ^uint32(2))
-	fmt.Printf("Test Value : %b\n", ^uintptr(2))
-	fmt.Printf("Test Value : %b\n", ^uint64(2))
-	fmt.Printf("Test Value : %b\n", int(2))
+
+	p := new(SyncedBuffer) // type *SyncedBuffer
+	var v SyncedBuffer     // type  SyncedBuffer
+	fmt.Println(p)
+	fmt.Println(&v)
 }
