@@ -24,12 +24,12 @@ func QueryAndPlay(keyWord string) error {
 	if len(keyWord) == 0 {
 		keyWord = "example"
 	}
-	file, err := getFilePath()
-	if err != nil {
-		return err
-	}
-	downloadFile(fmt.Sprintf("https://dict.youdao.com/dictvoice?audio=%s&type=2", keyWord), file)
 	if runtime.GOOS != "windows" {
+		file, err := getFilePath()
+		if err != nil {
+			return err
+		}
+		downloadFile(fmt.Sprintf("https://dict.youdao.com/dictvoice?audio=%s&type=2", keyWord), file)
 		play()
 	}
 
