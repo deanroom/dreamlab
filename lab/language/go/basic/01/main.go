@@ -2,7 +2,11 @@ package main
 
 import (
 	"fmt"
+	"io"
+	"log"
+	"os"
 	"sort"
+	"strings"
 )
 
 //SyncedBuffer is a test type.
@@ -51,13 +55,11 @@ func (b ByteSize) String() string {
 	return fmt.Sprintf("%.2fB", b)
 }
 func main() {
-	var s SyncedBuffer
-	s.A = 1
-	fmt.Println(s)
-	(&s).checkValue()
-	fmt.Println(s)
-	s.checkPointerValue()
-	fmt.Println(s)
+	r := strings.NewReader("some io.Reader stream to be read\n")
+
+	if _, err := io.Copy(os.Stdout, r); err != nil {
+		log.Fatal(err)
+	}
 
 }
 func min(a ...int) int {
