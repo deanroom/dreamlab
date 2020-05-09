@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-mod front_of_house {
-    mod hosting {
-        fn add_to_waitlist() {}
-
-        fn seat_at_table() {}
-    }
-
-    mod serving {
-        fn take_order() {}
-
-        fn serve_order() {}
-
-        fn take_payment() {}
-    }
-}
-=======
 use std::error::Error;
 use std::fs;
 
@@ -42,4 +25,3 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
 
     Ok(())
 }
->>>>>>> 0b3d790c537a024180f280d50e9dd0bc1b4578d8
