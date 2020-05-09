@@ -1,10 +1,13 @@
 {
   "folders": [
-	{
-		"path": "guessing_game"
-	},
-	{
-		"path": "hello_cargo"
-	}
-]
+    {
+      "path": "guessing_game"
+    },
+    {
+      "path": "hello_cargo"
+    },
+    {
+      "path": "minigrep"
+    }
+  ]
 }
