@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日语学习，日语培训，日语口语学习，日语一对一，商务日语-日本村外教网</title>
+    <meta name="viewport" content="width=750">
+    <link rel="stylesheet" href="index/css/index.css" >
+    <style>
+        .layui-layer-btn .layui-layer-btn0 {
+            font-size: .3rem;
+            margin-top: 20px;
+
+            
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="index/img/banner.png" alt="">
+</header>
+<div class="form" id="form">
+    <div class="bg1"></div>
+    <p>姓名/昵称（ニックネーム）<span>*</span></p>
+    <input type="text" id="nickname" placeholder="童鞋怎么称呼呀？(～￣▽￣)～  " class="form1" />
+    <p>手机号码（電話番号）<span>*</span> </p>
+    <input type="text" maxlength="11" id="mobile" placeholder="人家等你来免费试听课哦~(=>3<=)" class="form2" />
+
+    <input type="button" id="zhuce" onclick="register()" value="立即报名" class="form3" />
+    <div class="tips">
+        *报名后，免费赠送<span>价值288元1对1外教体验课</span>一节*<br>
+        立即测试出你的日语在二次元圈的水平~
+    </div>
+</div>
+<div class="ad">
+    <img src="index/img/ad.jpg">
+</div>
+<div class="methods">
+    <div class="bg2"></div>
+    <ul>
+        <li>
+            <h3><span>01</span>持续学习，关键是要先对胃口！</h3>
+            <p>看动漫、追日剧、学声优，用你喜欢的方式来教学！</p>
+        </li>
+        <li>
+            <h3><span>02</span>纯正发音，还得跟日本人学！</h3>
+            <p>1000名+外教随你选，教你说出一口地道日语！</p>
+        </li>
+        <li>
+            <h3><span>03</span>按需订制，匹配不同学习需求！</h3>
+            <p>高考、考研、留学、工作、兴趣等，按需订制专属课程</p>
+        </li>
+        <li>
+            <h3><span>04</span>在线上课，无地域、时差限制！</h3>
+            <p>24小时在家就能学，不用赶时间，不用长途跋涉去补习班！</p>
+        </li>
+    </ul>
+</div>
+<div class="tip">
+</div>
+<div class="now">
+    <h3>来跟我一起学习！</h3>
+    <h3>一起点燃<span>日语魂</span>吧！</h3>
+    <a href="#form">立即报名学习</a>
+</div>
+<div class="bottom">
+    <img src="index/img/bottom.jpg">
+</div>
+</body>
+<script src="../CommonJs/jquery.min.js"></script>
+<script src="../CommonJs/layer/layer.js"></script>
+<script src="../api/api.js"></script>
+<script>
+    function IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = ["Android", "iPhone",
+            "SymbianOS", "Windows Phone",
+            "iPad", "iPod"];
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+    var Pc = IsPC();
+    if(Pc){
+        $('html').css('background','#ffe4e4')
+        $('.bg1').show();
+        $('.bg2').show();
+    }else{
+        $('html').css('background','none')
+        $('.bg1').hide();
+        $('.bg2').hide();
+    }
+    //自适应
+    (function () {
+        var supportsOrientationChange = 'onorientationchange' in window ? 'orientationchange' : 'resize';
+        var clientWidth = document.documentElement.clientWidth;
+        var timer;
+        var nowPX = 0;
+        function setRem() {
+            clientWidth = document.documentElement.clientWidth;
+            if (clientWidth >= 1024) {
+                nowPX = 1024 / 375 * 20;
+            } else {
+                nowPX = clientWidth / 375 * 20;
+            }
+            document.documentElement.style.fontSize = nowPX + 'px';
+        }
+        clientWidth !== 375 && setRem();
+        window.addEventListener(supportsOrientationChange, function () {
+            clearTimeout(timer);
+            timer = setTimeout(function () {
+                setRem();
+            }, 300);
+        }, false);
+    })();
+    var httpurl = httpurls;
+    var url = window.location.href;
+    var fontUrl =  document.referrer;
+    //注册
+    function register() {
+        var rmobile = $("#mobile").val();//手机
+        var nickname = $("#nickname").val();//姓名
+
+        if (nickname.length == 0) {
+            layer.tips('请输入姓名！', '#nickname', {
+                tips: 1
+            });
+            return false;
+        }
+
+        //正则表达式
+        if (rmobile.length == 0) {
+            layer.tips('请输入手机！', '#mobile', {
+                tips: 1
+            });
+            return false;
+        }
+
+        var reg = /(1[3-9]\d{9}$)/;
+        if (!reg.test(rmobile)) {
+            layer.tips('请输入正确格式的手机号码！', '#mobile', {
+                tips: 1
+            });
+            return false;
+        }
+
+        //$("#zhuce").attr("disabled", "disabled");
+        //=============
+        var index = layer.load(2, { time: 10 * 1000 }); //加载层默认最大等待10秒
+        $.post(httpurl+"/rbg/api/UserHome/MobileReg",//异步处理动态页面
+            {
+                NickName: nickname,
+                Mobile: rmobile,
+                Type:'',
+                Remark:'',
+                UrlReg:fontUrl,
+                Adsource:url
+
+            },
+            function (data) {//data为反回值，function进行反回值处理
+                var json = data.Data;
+                if (data.Status == 1) {
+                    layer.close(index);//关闭加载层
+                    //layerAlertIcon("注册成功！", "1");
+                    //location.href = '/UserCentral/PersonalInformation';
+                    layerAlertIcon("注册成功！", "1");
+                    layer.msg("注册成功！", {icon: 1} );
+                    setTimeout(
+                        function () {
+                            location.href = httpurl + '/ntg/LoginSuccessMobile/'
+                        }, 4000);
+                    $$adConversionMethods.sendHandler();
+
+                } else {
+                    layer.close(index);//关闭加载层
+
+                    layerAlertIcon(data.Msg, "2");
+                }
+            });
+        //==============
+    }
+    function layerAlertIcon(message, iconindex) {
+        layer.alert(message, { icon: iconindex });
+    }
+</script>
+</html>
