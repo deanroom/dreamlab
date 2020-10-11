@@ -1,0 +1,15 @@
+<canvas id="c"></canvas>
+<script>
+    navigator.getUserMedia('audio', gotAudio);
+    var streamRecorder;
+    function gotAudio(stream) {
+        var microphone = context.createMediaStreamSource(stream);
+        var analyser = context.createAnalyser();
+        microphone.connect(analyser);
+        analyser.connect(context.destination);
+        requestAnimationFrame(drawAnimation);
+        
+        streamRecorder = stream.record();
+        peerConnection.addStream(stream);
+    }
+</script>
