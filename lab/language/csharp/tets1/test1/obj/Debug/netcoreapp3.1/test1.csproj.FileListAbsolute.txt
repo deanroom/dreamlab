@@ -1,0 +1,13 @@
+/home/jd/data/src/github.com/deanroom/lab/lab/language/csharp/tets1/test1/obj/Debug/netcoreapp3.1/test1.csprojAssemblyReference.cache
+/home/jd/data/src/github.com/deanroom/lab/lab/language/csharp/tets1/test1/obj/Debug/netcoreapp3.1/test1.AssemblyInfoInputs.cache
+/home/jd/data/src/github.com/deanroom/lab/lab/language/csharp/tets1/test1/obj/Debug/netcoreapp3.1/test1.AssemblyInfo.cs
+/home/jd/data/src/github.com/deanroom/lab/lab/language/csharp/tets1/test1/obj/Debug/netcoreapp3.1/test1.csproj.CoreCompileInputs.cache
+/home/jd/data/src/github.com/deanroom/lab/lab/language/csharp/tets1/test1/bin/Debug/netcoreapp3.1/test1
+/home/jd/data/src/github.com/deanroom/lab/lab/language/csharp/tets1/test1/bin/Debug/netcoreapp3.1/test1.deps.json
+/home/jd/data/src/github.com/deanroom/lab/lab/language/csharp/tets1/test1/bin/Debug/netcoreapp3.1/test1.runtimeconfig.json
+/home/jd/data/src/github.com/deanroom/lab/lab/language/csharp/tets1/test1/bin/Debug/netcoreapp3.1/test1.runtimeconfig.dev.json
+/home/jd/data/src/github.com/deanroom/lab/lab/language/csharp/tets1/test1/bin/Debug/netcoreapp3.1/test1.dll
+/home/jd/data/src/github.com/deanroom/lab/lab/language/csharp/tets1/test1/bin/Debug/netcoreapp3.1/test1.pdb
+/home/jd/data/src/github.com/deanroom/lab/lab/language/csharp/tets1/test1/obj/Debug/netcoreapp3.1/test1.dll
+/home/jd/data/src/github.com/deanroom/lab/lab/language/csharp/tets1/test1/obj/Debug/netcoreapp3.1/test1.pdb
+/home/jd/data/src/github.com/deanroom/lab/lab/language/csharp/tets1/test1/obj/Debug/netcoreapp3.1/test1.genruntimeconfig.cache
