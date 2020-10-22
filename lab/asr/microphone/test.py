@@ -31,8 +31,8 @@ def noalsaerr():
 
 @contextmanager
 def _pyaudio() -> Generator[PyAudio, None, None]:
-    with noalsaerr():
-        p = pyaudio.PyAudio()
+    #with noalsaerr():
+    p = pyaudio.PyAudio()
     try:
         yield p
     finally:
@@ -80,7 +80,7 @@ async def hello(uri):
 if len(sys.argv) == 2:
     server = sys.argv[1]
 else:
-    server = 'localhost:2700'
+    server = 'deansroom.oicp.net:2700'
 
 try:
     loop = asyncio.get_event_loop()
