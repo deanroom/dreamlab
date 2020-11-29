@@ -1,0 +1,258 @@
+{
+    "root": {
+        "data": {
+            "id": "c7fnar7j6kg0",
+            "created": 1606642682935,
+            "text": "Windows App"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "c7fnawjowj40",
+                    "created": 1606642694554,
+                    "text": "UWP",
+                    "layout_mind_offset": {
+                        "x": -464,
+                        "y": -59
+                    }
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "c7fnbinxbrk0",
+                    "created": 1606642742700,
+                    "text": "Win32",
+                    "layout_mind_offset": {
+                        "x": -13,
+                        "y": -50
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c7fnfo284zk0",
+                            "created": 1606643067905,
+                            "text": "Desktop Technologies",
+                            "layout_left_offset": {
+                                "x": 94,
+                                "y": 80
+                            },
+                            "layout_right_offset": {
+                                "x": -433,
+                                "y": 156
+                            }
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c7fnfz5s9r40",
+                                    "created": 1606643092065,
+                                    "text": "Diagnostics",
+                                    "layout_left_offset": {
+                                        "x": -209,
+                                        "y": 136.00000000000003
+                                    },
+                                    "layout_right_offset": {
+                                        "x": 32,
+                                        "y": 69
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c7fng2rt7mo0",
+                                            "created": 1606643099928,
+                                            "text": "Windwoss Events",
+                                            "expandState": "expand",
+                                            "layout_right_offset": {
+                                                "x": 31,
+                                                "y": 34
+                                            },
+                                            "layout_left_offset": {
+                                                "x": 16,
+                                                "y": 174
+                                            },
+                                            "note": "https://docs.microsoft.com/en-us/windows/win32/events/windows-events"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "c7fnhhr8c8g0",
+                                                    "created": 1606643210908,
+                                                    "text": "TraceLogging(Win10)",
+                                                    "layout_right_offset": {
+                                                        "x": -14,
+                                                        "y": 195.00000000000003
+                                                    }
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "c7fnghhvwo00",
+                                                    "created": 1606643131978,
+                                                    "text": " Event Tracing for Windows(ETW)",
+                                                    "layout_right_offset": {
+                                                        "x": -14,
+                                                        "y": -265
+                                                    },
+                                                    "expandState": "expand"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "c7fnu2vs5f40",
+                                                            "created": 1606644197265,
+                                                            "text": "Event Tracing(User-Mode)",
+                                                            "layout_right_offset": {
+                                                                "x": -11.999999999999943,
+                                                                "y": 56
+                                                            }
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c7fnu6jrmn40",
+                                                                    "created": 1606644205246,
+                                                                    "text": "Controllers"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c7fnu9q28bs0",
+                                                                    "created": 1606644212157,
+                                                                    "text": "Providers"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "c7fo4d64djs0",
+                                                                            "created": 1606645003300,
+                                                                            "text": "WPP(Prior to Vista)"
+                                                                        },
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "c7fo49pb2aw0",
+                                                                            "created": 1606644995753,
+                                                                            "text": "MOF(Prior to Vista)"
+                                                                        },
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "c7fnv178xd40",
+                                                                            "created": 1606644271969,
+                                                                            "text": "manifest-based provider(EventRegister\n/EventWrite)"
+                                                                        },
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "c7fnv2xr6880",
+                                                                            "created": 1606644275749,
+                                                                            "text": "TraceLogging provider(Win 10)"
+                                                                        },
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c7fnucivpe80",
+                                                                    "created": 1606644218253,
+                                                                    "text": "Consumers"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "c7fnzgfr7xs0",
+                                                                            "created": 1606644618592,
+                                                                            "text": "Log files"
+                                                                        },
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "c7fnzi306ko0",
+                                                                            "created": 1606644622175,
+                                                                            "text": "Real time"
+                                                                        },
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c7fo14blt8o0",
+                                                                    "created": 1606644748948,
+                                                                    "text": "Event Tracing Sessions"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "c7fo2fiq8i00",
+                                                            "created": 1606644851687,
+                                                            "text": "Event Tracing(Kernel-Mode)",
+                                                            "layout_right_offset": {
+                                                                "x": -9,
+                                                                "y": 80
+                                                            }
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "c7fo2xzpvdk0",
+                                                                    "created": 1606644891897,
+                                                                    "text": "WPP Software Tracing"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "c7fo2zd2z6o0",
+                                                                    "created": 1606644894882,
+                                                                    "text": " WMI Event Tracing"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c7fnbm10s7s0",
+                    "created": 1606642750022,
+                    "text": "WPF"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "c7fnbrklj000",
+                    "created": 1606642762089,
+                    "text": "Windows Form"
+                },
+                "children": []
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

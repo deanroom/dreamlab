@@ -1,0 +1,34 @@
+{
+    "root": {
+        "data": {
+            "id": "c7foilhut7k0",
+            "created": 1606646118522,
+            "text": " .NET TraceProcessing"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "c7foo8nkrzc0",
+                    "created": 1606646560755,
+                    "text": "Microsoft.Windows.EventTracing.Processing.All",
+                    "note": "Required System.Security.Principal.Windows 4.6.0"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "c7for8zrxgw0",
+                    "created": 1606646796585,
+                    "text": "3rd Party",
+                    "note": "https://github.com/search?l=C%23&q=ETW&type=Repositories",
+                    "hyperlink": "https://github.com/search?l=C%23&q=ETW&type=Repositories",
+                    "hyperlinkTitle": "github资源"
+                },
+                "children": []
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

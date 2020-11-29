@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "serialize", "serialize\serialize.csproj", "{B852016C-6C0C-47C0-A415-D21858CC6107}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "etw", "etw\etw.csproj", "{EEFEB859-972B-4ACB-8FAD-E7FF18909691}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B852016C-6C0C-47C0-A415-D21858CC6107}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B852016C-6C0C-47C0-A415-D21858CC6107}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B852016C-6C0C-47C0-A415-D21858CC6107}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B852016C-6C0C-47C0-A415-D21858CC6107}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEFEB859-972B-4ACB-8FAD-E7FF18909691}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEFEB859-972B-4ACB-8FAD-E7FF18909691}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEFEB859-972B-4ACB-8FAD-E7FF18909691}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEFEB859-972B-4ACB-8FAD-E7FF18909691}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
