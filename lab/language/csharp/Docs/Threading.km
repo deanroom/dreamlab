@@ -1,0 +1,186 @@
+{
+    "root": {
+        "data": {
+            "id": "c7lgb3ahyd40",
+            "created": 1607232321207,
+            "text": "Synchronization primitives"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "c7lge2tqebc0",
+                    "created": 1607232555285,
+                    "text": "System.MarshalByRefObject",
+                    "layout_mind_offset": {
+                        "x": -71,
+                        "y": 485
+                    },
+                    "expandState": "expand"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c7lgbhqvyt40",
+                            "created": 1607232352673,
+                            "text": "System.Threading.WaitHandle"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c7lgc3cde0w0",
+                                    "created": 1607232399684,
+                                    "text": "System.Threading.Mutex"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c7lgcb4bh5s0",
+                                    "created": 1607232416611,
+                                    "text": "System.Threading.Semaphore"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c7lgg1a0m5c0",
+                                            "created": 1607232708645,
+                                            "text": "SemaphoreSlim"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "c7lgcjgju9c0",
+                                    "created": 1607232434765,
+                                    "text": "System.Threading.EventWaitHandle"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "c7lgcozw2jk0",
+                                            "created": 1607232446819,
+                                            "text": "System.Threading.AutoResetEvent"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "c7lgcz6zqy80",
+                                            "created": 1607232469016,
+                                            "text": "System.Threading.ManualResetEvent"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c7lgfgjtp340",
+                    "created": 1607232663525,
+                    "text": "System.Object",
+                    "layout_mind_offset": {
+                        "x": -70.99999999999989,
+                        "y": -274
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c7lgx3lnso00",
+                            "created": 1607234045893,
+                            "text": "System.Threading.Interlocked"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7lghdzr6a00",
+                            "created": 1607232814687,
+                            "text": "System.Threading.Monitor"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7lgm5rejx40",
+                            "created": 1607233188588,
+                            "text": "System.Threading.ReaderWriterLockSlim"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7lgms5cnsw0",
+                            "created": 1607233237321,
+                            "text": "System.Threading.SemaphoreSlim"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7lgtlqrd140",
+                            "created": 1607233771927,
+                            "text": "System.Threading.ManualResetEventSlim"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7lgva2xc8w0",
+                            "created": 1607233903270,
+                            "text": "System.Threading.CountdownEvent"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7lgwm62hqg0",
+                            "created": 1607234007945,
+                            "text": " System.Threading.Barrier"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "c7lgl8fydl40",
+                    "created": 1607233116062,
+                    "text": "System.ValueType",
+                    "layout_mind_offset": {
+                        "x": 776,
+                        "y": 131
+                    },
+                    "expandState": "expand"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c7lgk9e4ibc0",
+                            "created": 1607233039764,
+                            "text": "System.Theading.SpinLock"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "c7lgygv6ck00",
+                            "created": 1607234153131,
+                            "text": "System.Threading.SpinWait"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

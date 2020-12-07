@@ -5,7 +5,7 @@ namespace Threading
 {
     class EventHandleWaitTest
     {
-            // The EventWaitHandle used to demonstrate the difference
+    // The EventWaitHandle used to demonstrate the difference
     // between AutoReset and ManualReset synchronization events.
     //
     private static EventWaitHandle ewh;

@@ -37,6 +37,7 @@ namespace Threading
             // The time shown below should match the shortest task.
             Console.WriteLine("Task {0} finished first (time waited={1}).",
                 index + 1, (DateTime.Now - dt).TotalMilliseconds);
+            Console.ReadLine();
         }
 
         static void DoTask(Object state)
