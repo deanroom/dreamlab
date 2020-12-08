@@ -1,7 +1,7 @@
 using System;
 using System.Threading;
 
-namespace Threading
+namespace ThreadingTest
 {
     public class WaitOneTest
     {
