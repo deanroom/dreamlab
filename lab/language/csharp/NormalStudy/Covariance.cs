@@ -19,7 +19,7 @@ namespace NormalStudy
         {
             AddValue<Test2>(x=>Write(x));
         }
-        public static void Write<T>(T a) where T:Test2
+        public static void Write<T>(T a) where T:Test1
         {
             Console.WriteLine(a);
         }

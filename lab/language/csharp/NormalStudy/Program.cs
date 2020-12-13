@@ -9,7 +9,7 @@ namespace NormalStudy
     {
         static void Main(string[] args)
         {
-            Convariance.Run();
+            new MethodCall().Method1();
         }
     }
 }
