@@ -10,9 +10,9 @@ namespace GenericsExample
         static void Main(string[] args)
         {
             //generic list
-            List<int> ListGeneric = new List<int> {5, 9, 1, 4};
+            List<int> ListGeneric = new List<int> {5, 9, 1, 4,10,30,405};
             //non-generic list
-            ArrayList ListNonGeneric = new ArrayList(){ 5, 9, 1, 4};
+            ArrayList ListNonGeneric = new ArrayList(){ 5, 9, 1, 4,10,30,405};
             // timer for generic list sort
             Stopwatch s = Stopwatch.StartNew();
             ListGeneric.Sort();
