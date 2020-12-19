@@ -7,7 +7,7 @@ namespace ThreadingTest
     {
         static void Main(string[] args)
         {
-            ManualEventResetTest.Run();
+            NormalThread.Run();
         }
     }
 }
