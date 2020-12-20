@@ -10,7 +10,8 @@ namespace NormalStudy
         }
         string Test(string a)
         {
-            return a;
+            return a; 
+            a.GetType();
         }
         void Test()
         {
