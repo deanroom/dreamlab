@@ -24,35 +24,34 @@ namespace serialize
             };
             
             var json = JsonConvert.SerializeObject(me);
-            Console.WriteLine($"Normal Serialize:\n{json}");
+            //Console.WriteLine($"Normal Serialize:\n{json}");
 
             var meAgain = JsonConvert.DeserializeObject<Person>(json);
-            var meAgainJson = JsonConvert.SerializeObject(meAgain);
-            Console.WriteLine($"Normal deserialize:\n{meAgainJson}");
+            //Console.WriteLine($"Normal deserialize:\n{meAgainJson}");
 
-            var json1 = JsonConvert.SerializeObject(me, Formatting.Indented,
-                new JsonSerializerSettings
-                {
-                    TypeNameHandling = TypeNameHandling.All
-                });
-
-            Console.WriteLine($"TypeNameHandling serialize:\n{json1}");
-            JObject rss = JObject.Parse(json1);
-            var typeString = rss.First.Values().Aggregate((current, x) =>
-            {
-                return current.ToString() + x.ToString();
-            });
-            var type = Type.GetType(typeString.ToString());
-            var meAgain1 = JsonConvert.DeserializeObject(json1, type);
-            var meAgainJson1 = JsonConvert.SerializeObject(meAgain1);
-            Console.WriteLine($"Use the type get from json to deserialize and then normal serialize:\n{meAgainJson1}");
-
-            var meAgain2 = JsonConvert.DeserializeObject(json1, new JsonSerializerSettings
-            {
-                TypeNameHandling = TypeNameHandling.All
-            });
-            var meAgainJson2 = JsonConvert.SerializeObject(meAgain2);
-            Console.WriteLine($"Use type naming handling deserialize and then normal serialize:\n{meAgainJson2}");
+            // var json1 = JsonConvert.SerializeObject(me, Formatting.Indented,
+            //     new JsonSerializerSettings
+            //     {
+            //         TypeNameHandling = TypeNameHandling.All
+            //     });
+            //
+            // Console.WriteLine($"TypeNameHandling serialize:\n{json1}");
+            // JObject rss = JObject.Parse(json1);
+            // var typeString = rss.First.Values().Aggregate((current, x) =>
+            // {
+            //     return current.ToString() + x.ToString();
+            // });
+            // var type = Type.GetType(typeString.ToString());
+            // var meAgain1 = JsonConvert.DeserializeObject(json1, type);
+            // var meAgainJson1 = JsonConvert.SerializeObject(meAgain1);
+            // //Console.WriteLine($"Use the type get from json to deserialize and then normal serialize:\n{meAgainJson1}");
+            //
+            // var meAgain2 = JsonConvert.DeserializeObject(json1, new JsonSerializerSettings
+            // {
+            //     TypeNameHandling = TypeNameHandling.All
+            // });
+            // var meAgainJson2 = JsonConvert.SerializeObject(meAgain2);
+            // //Console.WriteLine($"Use type naming handling deserialize and then normal serialize:\n{meAgainJson2}");
         }
     }
 
