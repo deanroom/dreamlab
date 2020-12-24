@@ -12,24 +12,25 @@ namespace serialize
 {
     class Program
     {
+        [STAThread]
         static void Main(string[] args)
         {
-            for (int i = 0; i < 10; i++)
+            Stopwatch sw = new Stopwatch();
+            var timeCost = new List<long>();
+            for (int i = 0; i < 2000; i++)
             {
-                Stopwatch sw = new Stopwatch();
-                sw.Start();
+                sw.Restart();
                 TypeNamingTest.Run();
-                Console.WriteLine("Cost Time {0}ms",sw.ElapsedMilliseconds);
-                sw.Restart();
-                using (var output = new StringWriter())
-                {
-                    JSON.Serialize(new Me(){FirstName = i.ToString()},output);
-                }
-                Console.WriteLine("Cost Time {0}ms",sw.ElapsedMilliseconds);
-                
-                sw.Restart();
-                Utf8Json.Run();
-                Console.WriteLine("Cost Time {0}ms",sw.ElapsedMilliseconds);
+                timeCost.Add(sw.ElapsedTicks);
+                //Console.WriteLine($"Max time {timeCost.Max(x=>x).ToString()}, avg {timeCost.Average(x=>x).ToString()}");
+            }
+
+            var top = timeCost.OrderByDescending(x => x).Take(100);
+var index = 0;
+            foreach (var time in timeCost.OrderBy(x=>x))
+            {
+                index++;
+                Console.WriteLine($"{index},{time}");
             }
         }
     }
