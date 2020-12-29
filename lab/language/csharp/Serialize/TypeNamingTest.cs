@@ -26,7 +26,7 @@ namespace serialize
             var json = JsonConvert.SerializeObject(me);
             //Console.WriteLine($"Normal Serialize:\n{json}");
 
-            var meAgain = JsonConvert.DeserializeObject<Person>(json);
+            var meAgain = JsonConvert.DeserializeObject<Me>(json);
             //Console.WriteLine($"Normal deserialize:\n{meAgainJson}");
 
             // var json1 = JsonConvert.SerializeObject(me, Formatting.Indented,
@@ -59,7 +59,6 @@ namespace serialize
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public DateTime BirthDate { get; set; }
     }
 
     public class Employee : Person
