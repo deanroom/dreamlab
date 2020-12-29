@@ -10,6 +10,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "serialize", "Serialize\seri
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threading", "Threading\Threading.csproj", "{D1413421-ABC4-49E5-BA86-9D331675C4DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtoBuf", "ProtoBuf\ProtoBuf\ProtoBuf.csproj", "{0A3DE17E-6E9E-4BD0-8915-8A54013ADB10}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProtoBuf", "ProtoBuf", "{6D00A560-EBD7-4570-88F0-611C7E982FB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +40,12 @@ Global
 		{D1413421-ABC4-49E5-BA86-9D331675C4DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1413421-ABC4-49E5-BA86-9D331675C4DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1413421-ABC4-49E5-BA86-9D331675C4DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A3DE17E-6E9E-4BD0-8915-8A54013ADB10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A3DE17E-6E9E-4BD0-8915-8A54013ADB10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A3DE17E-6E9E-4BD0-8915-8A54013ADB10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A3DE17E-6E9E-4BD0-8915-8A54013ADB10}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0A3DE17E-6E9E-4BD0-8915-8A54013ADB10} = {6D00A560-EBD7-4570-88F0-611C7E982FB7}
 	EndGlobalSection
 EndGlobal

@@ -14,11 +14,12 @@ namespace serialize
         {
             Stopwatch sw = new Stopwatch();
             sw.Start();
-            TypeNamingTest.Run();
-            Console.WriteLine("Cost Time {0}ms",sw.ElapsedMilliseconds);
-            sw.Restart();
-            BoisTest.Run();
-            Console.WriteLine("Cost Time {0}ms",sw.ElapsedMilliseconds);
+            for (int i = 0; i < 1_00_000; i++)
+            {
+                TypeNamingTest.Run();
+            }
+            Console.WriteLine($"Cost time {sw.ElapsedMilliseconds}ms");
+            
             
         }
     }
