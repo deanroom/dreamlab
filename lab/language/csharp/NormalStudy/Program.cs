@@ -10,7 +10,9 @@ namespace NormalStudy
         static void Main(string[] args)
         {
             //new MethodCall().Method1();
-            StopwatchTest.DisplayTimerProperties();
+            //StopwatchTest.DisplayTimerProperties();
+            Console.WriteLine(typeof(object).Name);
+            Console.WriteLine(typeof(object).ToString());
 
         }
     }

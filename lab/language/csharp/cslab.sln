@@ -6,7 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegate", "Delegate\Delega
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covariance", "Covariance\Covariance.csproj", "{A5850164-3B40-4B5F-869F-EA59ED08AC80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "serialize", "Serialize\serialize.csproj", "{D463A2AB-9EAB-4448-ADD6-FB81123B9B19}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializeTest", "Serialize\SerializeTest.csproj", "{D463A2AB-9EAB-4448-ADD6-FB81123B9B19}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threading", "Threading\Threading.csproj", "{D1413421-ABC4-49E5-BA86-9D331675C4DC}"
 EndProject

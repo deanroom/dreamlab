@@ -1,14 +1,17 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using BenchmarkDotNet.Attributes;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 
-namespace serialize
+namespace SerializeTest
 {
     public class TypeNamingTest
     {
+        
+        [Benchmark]
         public static void Run()
         {
             var me = new Me()
@@ -35,7 +38,7 @@ namespace serialize
             //         TypeNameHandling = TypeNameHandling.All
             //     });
             //
-            // Console.WriteLine($"TypeNameHandling serialize:\n{json1}");
+            // Console.WriteLine($"TypeNameHandling SerializeTest:\n{json1}");
             // JObject rss = JObject.Parse(json1);
             // var typeString = rss.First.Values().Aggregate((current, x) =>
             // {
@@ -44,14 +47,14 @@ namespace serialize
             // var type = Type.GetType(typeString.ToString());
             // var meAgain1 = JsonConvert.DeserializeObject(json1, type);
             // var meAgainJson1 = JsonConvert.SerializeObject(meAgain1);
-            // //Console.WriteLine($"Use the type get from json to deserialize and then normal serialize:\n{meAgainJson1}");
+            // //Console.WriteLine($"Use the type get from json to deserialize and then normal SerializeTest:\n{meAgainJson1}");
             //
             // var meAgain2 = JsonConvert.DeserializeObject(json1, new JsonSerializerSettings
             // {
             //     TypeNameHandling = TypeNameHandling.All
             // });
             // var meAgainJson2 = JsonConvert.SerializeObject(meAgain2);
-            // //Console.WriteLine($"Use type naming handling deserialize and then normal serialize:\n{meAgainJson2}");
+            // //Console.WriteLine($"Use type naming handling deserialize and then normal SerializeTest:\n{meAgainJson2}");
         }
     }
 

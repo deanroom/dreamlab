@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using Utf8Json;
 
-namespace serialize
+namespace SerializeTest
 {
     public class Utf8Json
     {

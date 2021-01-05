@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using Jil;
 
-namespace serialize
+namespace SerializeTest
 {
     public class JilTest
     {
