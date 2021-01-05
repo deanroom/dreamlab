@@ -1,0 +1,48 @@
+{
+    "root": {
+        "data": {
+            "id": "c8bagsbaj0o0",
+            "created": 1609856399709,
+            "text": "操作系统"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "c8bb0ljccsg0",
+                    "created": 1609857952242,
+                    "text": "虚拟化"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "c8bb0o13atk0",
+                            "created": 1609857957668,
+                            "text": "分离策略和机制"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "c8bb17fqe540",
+                                    "created": 1609857999913,
+                                    "text": "机制"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "c8bb19l8gts0",
+                                    "created": 1609858004599,
+                                    "text": "策略"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}
