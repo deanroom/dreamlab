@@ -56,3 +56,4 @@ lib/*
 bin/*
 test/test_runner
 **/.DS_Store
+.DS_Store
