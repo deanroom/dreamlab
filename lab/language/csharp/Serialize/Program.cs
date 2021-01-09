@@ -16,7 +16,8 @@ namespace SerializeTest
         [STAThread]
         static void Main(string[] args)
         {
-            var summary = BenchmarkRunner.Run<TypeNamingBenchMark>();
+            //var summary = BenchmarkRunner.Run<TypeNamingBenchMark>();
+            ProtobufNetTest.Run();
         }
     }
 }
