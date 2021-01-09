@@ -3,10 +3,11 @@ using System.IO;
 using Newtonsoft.Json;
 using ProtoBuf;
 
-namespace ProtobufNetTest
+namespace ConsoleApplication1
 {
     [ProtoContract]
-    public abstract class ProtoPerson
+    //[ProtoInclude(11,typeof(Student))]
+    public abstract  class ProtoPerson
     {
         [ProtoMember(1)] public string Name { get; set; }
     }
@@ -22,7 +23,7 @@ namespace ProtobufNetTest
     {
         public static void Run()
         {
-            var student = new Student {Age = 10, Gender = "Male"};
+            var student = new Student {Age = 10, Gender = "Male",Name="Test"};
             var newStudent = ProcessData(student);
             Console.WriteLine(JsonConvert.SerializeObject(newStudent));
         }
