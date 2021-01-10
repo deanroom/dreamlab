@@ -8,7 +8,13 @@ namespace ThreadingTest
     {
         public static void Run(){
             Console.WriteLine(Stopwatch.GetTimestamp());
-            Thread.Sleep(0);
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
+            for (int i = 0; i < 1000_0000; i++)
+            {
+                //Thread.Sleep(0);
+            }
+            Console.WriteLine($"Cost time {sw.ElapsedMilliseconds}ms");
             Console.WriteLine(Stopwatch.GetTimestamp());
         }
 
