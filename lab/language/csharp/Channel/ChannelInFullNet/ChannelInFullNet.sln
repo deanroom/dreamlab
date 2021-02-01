@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChannelInFullNet", "ChannelInFullNet\ChannelInFullNet.csproj", "{7BA8E812-3B51-4CCE-A532-445036828A2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChannelInFullNet.Test", "ChannelInFullNet.Test\ChannelInFullNet.Test.csproj", "{ABC5276A-D52B-4075-9745-68DD6D659D6C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7BA8E812-3B51-4CCE-A532-445036828A2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BA8E812-3B51-4CCE-A532-445036828A2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BA8E812-3B51-4CCE-A532-445036828A2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BA8E812-3B51-4CCE-A532-445036828A2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABC5276A-D52B-4075-9745-68DD6D659D6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABC5276A-D52B-4075-9745-68DD6D659D6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABC5276A-D52B-4075-9745-68DD6D659D6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABC5276A-D52B-4075-9745-68DD6D659D6C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
