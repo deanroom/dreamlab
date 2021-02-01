@@ -7,7 +7,7 @@ namespace ThreadingTest
     {
         static void Main(string[] args)
         {
-            SynchronizationContextTest.Run();
+            ThreadTest.Run();
         }
     }
 }
