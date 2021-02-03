@@ -1,5 +1,6 @@
 using System;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace ThreadingTest
 {
@@ -7,7 +8,7 @@ namespace ThreadingTest
     {
         static void Main(string[] args)
         {
-            ThreadTest.Run();
+            SyncThreadPerformance.Run();
         }
     }
 }

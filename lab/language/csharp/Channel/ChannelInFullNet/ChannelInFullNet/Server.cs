@@ -12,6 +12,8 @@ namespace ChannelInFullNet
         private Timer _timer;
         private Task _coreTask;
 
+        private readonly SemaphoreSlim semaphoreSlim = new SemaphoreSlim(1);
+
         public event Func<InMessage, OutMessage> TaskExecute;
 
         public Server(Channel channel)
