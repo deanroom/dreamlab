@@ -70,6 +70,7 @@ namespace ThreadingTest
     {
         public static long GetMicroSeconds(this long timeStamp)
         {
+            Console.WriteLine(Stopwatch.Frequency );
             return timeStamp / (Stopwatch.Frequency / 1_000_000);
         }
     }

@@ -8,7 +8,7 @@ namespace ThreadingTest
     {
         static void Main(string[] args)
         {
-            SyncThreadPerformance.Run();
+            EventWaitHandleTest.Run();
         }
     }
 }
