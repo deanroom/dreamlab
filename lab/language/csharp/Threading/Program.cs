@@ -8,7 +8,9 @@ namespace ThreadingTest
     {
         static void Main(string[] args)
         {
-            EventWaitHandleTest.Run();
+            var 吃饭= "午饭";
+            Console.WriteLine(吃饭);
+            //EventWaitHandleTest.Run();
         }
     }
 }
