@@ -9,39 +9,10 @@ namespace ThreadingTest
     public class TaskSchedulerTest : TaskScheduler, IDisposable
     {
         private readonly ConcurrentQueue<Task> _queue = new();
-
-
-        private Thread[] _threads;
         private bool _disposed;
-        private readonly int _threadCount = 1;
-        private readonly bool _isBackground = false;
-        private readonly object _lock = new object();
-        public int ThreadCount => _threadCount;
 
         public TaskSchedulerTest()
         {
-        }
-
-        public TaskSchedulerTest(int threadCount, bool isBackground = false) : this()
-        {
-            if (threadCount < 1)
-                throw new ArgumentOutOfRangeException(nameof(threadCount), "Must be at least 1");
-            _threadCount = threadCount;
-            _isBackground = isBackground;
-        }
-
-        public void RunAsync()
-        {
-            _threads = new Thread[_threadCount];
-            for (int i = 0; i < _threadCount; i++)
-            {
-                _threads[i] = new Thread(Run)
-                {
-                    IsBackground = _isBackground,
-                    Name = $"{nameof(TaskSchedulerTest)}Thread"
-                };
-                _threads[i].Start();
-            }
         }
 
         public Task Execute(Action action) =>
@@ -89,16 +60,9 @@ namespace ThreadingTest
 
         public void Dispose()
         {
-            lock (_lock)
-            {
-                if (_disposed)
-                    return;
-                _disposed = true;
-            }
-
-            // // foreach (var thread in _threads)
-            //     thread.Join();
-            // _threads = null;
+            if (_disposed)
+                return;
+            _disposed = true;
         }
     }
 
@@ -122,7 +86,6 @@ namespace ThreadingTest
                 Task.Factory.StartNew(() =>
                 {
                     Console.WriteLine($"Current Thread Id:{Thread.CurrentThread.ManagedThreadId}");
-
                 });
             });
             thread.Join();
